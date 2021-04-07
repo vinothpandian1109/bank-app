@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
+import org.springframework.lang.NonNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,9 +25,10 @@ import lombok.NoArgsConstructor;
 public class TransacationType {
 	
 	@Id
-	private int transactionId;
+	private int transactionTypeId;
 	
 	@Size(max = 100)
+	@NonNull
 	private String transactionName;
 
 }

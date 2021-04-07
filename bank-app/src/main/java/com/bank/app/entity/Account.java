@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import org.springframework.lang.NonNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -38,6 +40,7 @@ public class Account {
     @JoinColumn(name = "accountTypeId", referencedColumnName = "accountTypeId")
 	private AccountType accountType;
 	
+	@NonNull
 	private double balance;
 
 }

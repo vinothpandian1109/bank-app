@@ -1,7 +1,6 @@
 package com.bank.app.entity;
 
 import java.sql.Date;
-import java.util.UUID;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -10,6 +9,8 @@ import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
+
+import org.springframework.lang.NonNull;
 
 import com.bank.app.CompositeKey.TransactionId;
 
@@ -33,17 +34,22 @@ import lombok.NoArgsConstructor;
 public class Transacation {
 	
 	@Id
-	private UUID referenceNo;
+	private String referenceNo;
 	
 	@Id
 	@ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "accountNo", referencedColumnName = "accountNo")
     private Account account;
 	
+	@NonNull
+	private double transactionAmount;
+	
+	@NonNull
 	@ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "transactionId", referencedColumnName = "transactionId")
+    @JoinColumn(name = "transactionTypeId", referencedColumnName = "transactionTypeId")
 	private TransacationType transactionType;
 	
+	@NonNull
 	private Date transactionDate;
 	
 	@Size(max = 200)

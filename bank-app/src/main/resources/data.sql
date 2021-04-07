@@ -27,3 +27,12 @@ insert into account values (2,2000000,2,2);
 insert into account values (3,3000000,3,3);
 insert into account values (4,4000000,4,4);
 insert into account values (5,5000000,5,5);
+
+
+/* Generating account entries */
+
+insert into transacation values (1,'Comments',100,'2021-07-04','Comments',1,1);
+insert into transacation values (2,'Comments',500,'2021-07-04','Comments',2,2);
+insert into transacation values (3,'Comments',600,'2021-07-04','Comments',3,1);
+insert into transacation values (4,'Comments',700,'2021-07-04','Comments',4,2);
+insert into transacation values (5,'Comments',800,'2021-07-04','Comments',5,1);
