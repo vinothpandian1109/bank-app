@@ -4,14 +4,14 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
-import com.bank.app.CompositeKey.CustomerId;
-
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /*** 
  * Account entity maps to the account table with defined properties
@@ -21,14 +21,15 @@ import lombok.Data;
 
 @Entity
 @Data
-@IdClass(CustomerId.class)
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Account {
 	
 	@Id
 	@GeneratedValue
-    private Long accountNo;
+    private long accountNo;
 	
-	@Id
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "customerId", referencedColumnName = "customerId")
 	private Customer customer;

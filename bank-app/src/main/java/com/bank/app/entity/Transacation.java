@@ -13,7 +13,10 @@ import javax.validation.constraints.Size;
 
 import com.bank.app.CompositeKey.TransactionId;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /*** 
  * Transacation entity maps to the Transacation table with defined properties
@@ -23,6 +26,9 @@ import lombok.Data;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @IdClass(TransactionId.class)
 public class Transacation {
 	

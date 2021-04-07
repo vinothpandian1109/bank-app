@@ -1,9 +1,8 @@
 package com.bank.app.dao;
 
-import java.util.UUID;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.bank.app.CompositeKey.TransactionId;
 import com.bank.app.entity.Transacation;
 
 /*** 
@@ -12,6 +11,6 @@ import com.bank.app.entity.Transacation;
  * @author Vinothpandian P
  */
 
-public interface TransacationRepository extends JpaRepository<Transacation, UUID>{
-
+public interface TransacationRepository extends JpaRepository<Transacation, TransactionId>{
+	
 }

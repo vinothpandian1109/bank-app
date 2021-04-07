@@ -3,13 +3,15 @@ package com.bank.app.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.bank.app.entity.Account;
+import com.bank.app.entity.Customer;
 
 /*** 
- * AccountRepository is persistance layer of account details
+ * CustomerRepository is persistance layer of account details
  * 
  * @author Vinothpandian P
  */
 
-public interface AccountRepository extends JpaRepository<Account, Long>{
-
+public interface CustomerRepository extends JpaRepository<Customer, Long>{
+	
+	
 }

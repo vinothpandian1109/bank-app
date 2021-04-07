@@ -1,6 +1,7 @@
 package com.bank.app.CompositeKey;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 import com.bank.app.entity.Account;
 
@@ -12,6 +13,10 @@ import com.bank.app.entity.Account;
  */
 
 public class TransactionId implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
+	private UUID referenceNo;
 	
 	private Account account; 
 
