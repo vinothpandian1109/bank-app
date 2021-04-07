@@ -26,14 +26,17 @@ public class Account {
 	
 	@Id
 	@GeneratedValue
-    private long accountNo;
+    private Long accountNo;
+	
 	@Id
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "customerId", referencedColumnName = "customerId")
 	private Customer customer;
+	
 	@ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "accountTypeId", referencedColumnName = "accountTypeId")
 	private AccountType accountType;
+	
 	private double balance;
 
 }

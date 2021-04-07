@@ -19,6 +19,7 @@ public class Customer {
 	@Id
 	@GeneratedValue
 	private long customerId;
+	
 	private String cusomerName;
 
 }

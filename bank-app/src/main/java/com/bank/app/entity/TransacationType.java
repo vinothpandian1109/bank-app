@@ -17,6 +17,7 @@ public class TransacationType {
 	
 	@Id
 	private int transactionId;
+	
 	private String transactionName;
 
 }

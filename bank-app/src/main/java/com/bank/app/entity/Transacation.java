@@ -28,16 +28,21 @@ public class Transacation {
 	
 	@Id
 	private UUID referenceNo;
+	
 	@Id
 	@ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "accountNo", referencedColumnName = "accountNo")
     private Account account;
+	
 	@ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "transactionId", referencedColumnName = "transactionId")
 	private TransacationType transactionType;
+	
 	private Date transactionDate;
+	
 	@Size(max = 200)
 	private String transactionReason;
+	
 	@Size(max = 500)
 	private String comments;
 

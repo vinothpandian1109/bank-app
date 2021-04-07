@@ -1,10 +1,10 @@
 package com.bank.app.dao;
 
-import java.util.UUID;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.bank.app.CompositeKey.CustomerId;
 import com.bank.app.entity.Account;
+import com.bank.app.entity.Customer;
 
 /*** 
  * AccountRepository is persistance layer of account details
@@ -12,6 +12,6 @@ import com.bank.app.entity.Account;
  * @author Vinothpandian P
  */
 
-public interface AccountRepository extends JpaRepository<Account, UUID>{
+public interface AccountRepository extends JpaRepository<Account, CustomerId>{
 
 }
